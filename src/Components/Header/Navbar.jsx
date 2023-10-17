@@ -8,16 +8,42 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/products">Products</NavLink>
       </li>
       <li>
-        <NavLink to="/pricing">Pricing</NavLink>
+        <NavLink to="/add-product">Add Product</NavLink>
       </li>
       <li>
         <NavLink to="/about-us">About Us</NavLink>
       </li>
+      <li>
+        <NavLink to="/register">Register</NavLink>
+      </li>
+      {/* <li>
+        <NavLink to="/login">Login</NavLink>
+      </li> */}
+      {/* {user ? (
+        ""
+      ) : (
+        <>
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
+        </>
+      )}
+      {user && (
+        <>
+          <li>
+            <NavLink to="/contact-us">Contact Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+        </>
+      )} */}
     </>
   );
+
   return (
     <div className="max-w-6xl mx-auto">
       <div className="navbar bg-base-100">
@@ -46,12 +72,18 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <img className="invisible md:visible lg:visible" src={logo} alt="" />
+          <Link to="/">
+            <img
+              className="w-16 h-10 invisible md:visible lg:visible"
+              src={logo}
+              alt=""
+            />
+          </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-center -ml-28 md:navbar-center lg:navbar-center lg:ml-32">
+        {/* <div className="navbar-center -ml-28 md:navbar-center lg:navbar-center lg:ml-32">
           {user ? (
             <>
               <span>{user?.displayName}</span>
@@ -73,7 +105,7 @@ const Navbar = () => {
               <button className="btn  btn-sm">Login</button>
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

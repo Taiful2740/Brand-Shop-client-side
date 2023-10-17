@@ -5,15 +5,32 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AuthProvider from "./AuthProvider/AuthProvider.jsx";
 import Root from "./Root";
 import Home from "./Components/Header/Home";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
+import Products from "./Components/Pages/Products";
+import AddProduct from "./Components/Pages/AddProduct";
+import AboutUs from "./Components/Pages/AboutUs";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/products",
+        element: <Products></Products>,
+      },
+      {
+        path: "/add-product",
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs></AboutUs>,
       },
     ],
   },
