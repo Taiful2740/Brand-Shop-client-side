@@ -1,7 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/adidas-logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => console.log("Log Out Successfully"))
+      .catch(error => console.log(error.message));
+  };
+
   const links = (
     <>
       <li>
@@ -16,13 +26,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/about-us">About Us</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/register">Register</NavLink>
-      </li>
+      </li> */}
       {/* <li>
         <NavLink to="/login">Login</NavLink>
       </li> */}
-      {/* {user ? (
+      {user ? (
         ""
       ) : (
         <>
@@ -40,7 +50,7 @@ const Navbar = () => {
             <NavLink to="/profile">Profile</NavLink>
           </li>
         </>
-      )} */}
+      )}
     </>
   );
 
@@ -83,7 +93,7 @@ const Navbar = () => {
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        {/* <div className="navbar-center -ml-28 md:navbar-center lg:navbar-center lg:ml-32">
+        <div className="navbar-center -ml-28 md:navbar-center lg:navbar-center lg:ml-32">
           {user ? (
             <>
               <span>{user?.displayName}</span>
@@ -105,7 +115,7 @@ const Navbar = () => {
               <button className="btn  btn-sm">Login</button>
             </Link>
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );

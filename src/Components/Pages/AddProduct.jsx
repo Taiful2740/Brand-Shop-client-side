@@ -1,28 +1,28 @@
 import Swal from "sweetalert2";
 import Footer from "../Footer/Footer";
 const AddProduct = () => {
-  const handleAddCoffee = event => {
+  const handleAddProduct = event => {
     event.preventDefault();
 
     const form = event.target;
     const name = form.name.value;
-    const quantity = form.quantity.value;
-    const supplier = form.supplier.value;
-    const taste = form.taste.value;
-    const category = form.category.value;
-    const details = form.details.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const description = form.description.value;
     const photo = form.photo.value;
 
-    const newCoffee = {
+    const newProduct = {
       name,
-      quantity,
-      supplier,
-      taste,
-      category,
-      details,
+      brand,
+      type,
+      price,
+      rating,
+      description,
       photo,
     };
-    console.log(newCoffee);
+    console.log(newProduct);
 
     // send data to server
     fetch("http://localhost:5000/coffee", {
@@ -30,7 +30,7 @@ const AddProduct = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newCoffee),
+      body: JSON.stringify(newProduct),
     })
       .then(res => res.json())
       .then(data => {
@@ -51,7 +51,7 @@ const AddProduct = () => {
         <h1 className="text-3xl font-extrabold text-center mb-4">
           Add Product
         </h1>
-        <form onSubmit={handleAddCoffee}>
+        <form onSubmit={handleAddProduct}>
           {/* form row name */}
           <div className=" md:flex justify-center">
             <div className="form-control mr-4 md:w-1/2">
@@ -74,7 +74,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="quantity"
+                  name="brand"
                   placeholder=" Enter brand name"
                   className="input input-bordered w-full"
                 />
@@ -90,7 +90,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="supplier"
+                  name="type"
                   placeholder="Enter product type"
                   className="input input-bordered w-full"
                 />
@@ -103,7 +103,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="taste"
+                  name="price"
                   placeholder="Enter product price"
                   className="input input-bordered w-full"
                 />
@@ -119,7 +119,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="category"
+                  name="rating"
                   placeholder="Enter product rating"
                   className="input input-bordered w-full"
                 />
@@ -132,7 +132,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="details"
+                  name="description"
                   placeholder="Enter project description"
                   className="input input-bordered w-full"
                 />
