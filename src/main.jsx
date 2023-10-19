@@ -12,6 +12,12 @@ import AboutUs from "./Components/Pages/AboutUs";
 import Register from "./Components/LoginRegister/Register";
 import LogIn from "./Components/LoginRegister/LogIn";
 import Profile from "./Components/Header/Profile";
+import Reebok from "./Components/Brand/Reebok";
+import Adidas from "./Components/Brand/Adidas";
+import Puma from "./Components/Brand/Puma";
+import Nike from "./Components/Brand/Nike";
+import Gucci from "./Components/Brand/Gucci";
+import Zara from "./Components/Brand/Zara";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +53,30 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/reebok",
+        element: <Reebok></Reebok>,
+      },
+      {
+        path: "/adidas",
+        element: <Adidas></Adidas>,
+      },
+      {
+        path: "/puma",
+        element: <Puma></Puma>,
+      },
+      {
+        path: "/nike",
+        element: <Nike></Nike>,
+      },
+      {
+        path: "/gucci",
+        element: <Gucci></Gucci>,
+      },
+      {
+        path: "/zara",
+        element: <Zara></Zara>,
       },
     ],
   },

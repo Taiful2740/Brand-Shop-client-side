@@ -1,6 +1,3 @@
-// import { useContext } from "react";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { AuthContext } from "./AuthProvider";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
 
@@ -30,7 +27,6 @@ const Register = () => {
         text: "Password must be least 6 characters!",
         footer: '<a href="">Why do I have this issue?</a>',
       });
-      // setRegisterError("Password must be least 6 characters");
       return;
     } else if (
       !/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)
@@ -41,12 +37,8 @@ const Register = () => {
         text: "Should be uppercase & special characters!",
         footer: '<a href="">Why do I have this issue?</a>',
       });
-      // setRegisterError("Should be uppercase");
       return;
     }
-    // reset error
-    // setRegisterError("");
-    // setSuccess("");
 
     // create user in firebase
     createUser(email, password)
@@ -55,9 +47,6 @@ const Register = () => {
           swal("Good job!", "User Created Successfully!", "success");
           profileUpdate({ displayName: name, photoURL: photo });
         }
-        // console.log(result.user);
-        // alert("User Created Successfully");
-        // swal("Good job!", "User Created Successfully!", "success");
         e.target.reset("");
         navigate(location?.state ? location?.state : "/");
       })
