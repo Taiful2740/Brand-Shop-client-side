@@ -11,6 +11,7 @@ import AddProduct from "./Components/Pages/AddProduct";
 import AboutUs from "./Components/Pages/AboutUs";
 import Register from "./Components/LoginRegister/Register";
 import LogIn from "./Components/LoginRegister/LogIn";
+import Profile from "./Components/Header/Profile";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LogIn></LogIn>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
       },
     ],
   },

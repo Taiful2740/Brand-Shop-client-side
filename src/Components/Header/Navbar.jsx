@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/adidas-logo.png";
+import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
@@ -82,16 +82,21 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link to="/">
+          <Link to="/" className="flex justify-center items-center">
             <img
-              className="w-16 h-10 invisible md:visible lg:visible"
+              className="w-13 h-16 invisible md:visible lg:visible"
               src={logo}
               alt=""
             />
+            <h1 className="ml-1 text-3xl font-extrabold invisible md:visible lg:visible">
+              Fashion House
+            </h1>
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg font-semibold">
+            {links}
+          </ul>
         </div>
         <div className="navbar-center -ml-28 md:navbar-center lg:navbar-center lg:ml-32">
           {user ? (
@@ -100,7 +105,7 @@ const Navbar = () => {
               <div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <img
-                    className="w-10 rounded-full"
+                    className="w-10 rounded-full ml-2 "
                     src={user?.photoURL}
                     alt=""
                   />
