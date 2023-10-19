@@ -57,26 +57,32 @@ const router = createBrowserRouter([
       {
         path: "/reebok",
         element: <Reebok></Reebok>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/adidas",
         element: <Adidas></Adidas>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/puma",
         element: <Puma></Puma>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/nike",
         element: <Nike></Nike>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/gucci",
         element: <Gucci></Gucci>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/zara",
         element: <Zara></Zara>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
     ],
   },
