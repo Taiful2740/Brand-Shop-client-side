@@ -20,6 +20,8 @@ import Zara from "./Components/Brand/Zara";
 import UpdateProduct from "./Components/Pages/UpdateProduct";
 import Details from "./Components/Pages/Details";
 import MyCart from "./Components/Header/MyCart";
+import PrivateRoute from "./Components/Header/PrivateRoute";
+import ContactUs from "./Components/Pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -34,15 +36,27 @@ const router = createBrowserRouter([
 
       {
         path: "/add-product",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-cart",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/about-us",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs></ContactUs>,
       },
       {
         path: "/register",
@@ -55,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/cart/:id",
+        element: <Details></Details>,
       },
       {
         path: "/updateProduct/:id",
@@ -70,32 +88,56 @@ const router = createBrowserRouter([
       },
       {
         path: "/reebok",
-        element: <Reebok></Reebok>,
+        element: (
+          <PrivateRoute>
+            <Reebok></Reebok>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/adidas",
-        element: <Adidas></Adidas>,
+        element: (
+          <PrivateRoute>
+            <Adidas></Adidas>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/puma",
-        element: <Puma></Puma>,
+        element: (
+          <PrivateRoute>
+            <Puma></Puma>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/nike",
-        element: <Nike></Nike>,
+        element: (
+          <PrivateRoute>
+            <Nike></Nike>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/gucci",
-        element: <Gucci></Gucci>,
+        element: (
+          <PrivateRoute>
+            <Gucci></Gucci>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/zara",
-        element: <Zara></Zara>,
+        element: (
+          <PrivateRoute>
+            <Zara></Zara>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/product"),
       },
     ],

@@ -1,14 +1,16 @@
 import AllBrand from "../AllBrand/AllBrand";
-import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
+import CustomerReview from "../Pages/CustomerReview";
+import OurServices from "../Pages/OurServices";
 import Slider from "../Slider";
 
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
-      <AllBrand></AllBrand>
       <Slider></Slider>
+      <AllBrand></AllBrand>
+      <OurServices></OurServices>
+      <CustomerReview></CustomerReview>
       <Footer></Footer>
     </div>
   );

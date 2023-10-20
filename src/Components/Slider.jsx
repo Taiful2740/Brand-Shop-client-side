@@ -1,11 +1,7 @@
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const spanStyle = {
-  padding: "20px",
-  background: "#efefef",
-  color: "#000000",
-};
+const spanStyle = {};
 
 const divStyle = {
   display: "flex",
@@ -16,20 +12,28 @@ const divStyle = {
 };
 const slideImages = [
   {
-    url: "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    caption: "Slide 1",
+    url: "https://avantisport.com/media/catalog/category/Reebok_banner_1.jpg",
+    // caption: "Slide 1",
   },
   {
-    url: "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-    caption: "Slide 2",
+    url: "https://thumbs.dreamstime.com/b/tyumen-russia-january-running-orange-sneakers-adidas-multinational-company-collage-banner-wide-panorama-shoes-color-photo-269506671.jpg",
+    // caption: "Slide 2",
   },
   {
-    url: "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    caption: "Slide 3",
+    url: "https://theloungekwt.com/pub/media/codazon_cache/brand/1200x/wysiwyg/codazon/Brand/banner-cover_puma.jpg",
+    // caption: "Slide 3",
   },
   {
-    url: "https://reebok.bynder.com/transform/95fa339a-0994-455f-b938-b2e5a978f7fe/23FW_Holiday-Generic_HP-Masthead_DT?fm=jpg&q=90&fit=fill&w=1200p",
-    caption: "Slide 4",
+    url: "https://qualitance.com/wp-content/uploads/2019/01/nike-brand-greatness.jpg",
+    // caption: "Slide 4",
+  },
+  {
+    url: "https://static.dw.com/image/52092142_6.jpg",
+    // caption: "Slide 5",
+  },
+  {
+    url: "https://fivmagazine.com/wp-content/uploads/2018/08/Gucci-mode-luxus-high-fashion-taschen-schuhe-marke-rot-gr%C3%BCn.jpg",
+    // caption: "Slide 6",
   },
 ];
 

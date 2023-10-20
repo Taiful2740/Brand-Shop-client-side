@@ -1,7 +1,8 @@
+import { Rating } from "@mui/material";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const CardReebok = ({ data }) => {
-  const { _id, photo, type, name, brand, price, description } = data;
+  const { _id, photo, type, name, brand, price, description, rating } = data;
   return (
     <div>
       <div className="card w-80 bg-base-100 shadow-xl">
@@ -10,10 +11,18 @@ const CardReebok = ({ data }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
-          <p>{type}</p>
+          <div className="flex justify-between">
+            <span>Type: {type}</span>
+            <span>Brand: {brand}</span>
+          </div>
+          <p className="text-xl">Price: ${price}</p>
+          <Rating
+            name="half-rating-read"
+            defaultValue={rating}
+            precision={0.5}
+            readOnly
+          />
           <p>{description}</p>
-          <p>{brand}</p>
-          <p>${price}</p>
           <div className="card-actions justify-end">
             <button className="btn btn-success">View Details</button>
             <Link to={`/updateProduct/${_id}`}>

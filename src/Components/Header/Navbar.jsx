@@ -24,12 +24,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/my-cart">My Cart</NavLink>
       </li>
-      <li>
-        <NavLink to="/about-us">About Us</NavLink>
-      </li>
       {/* <li>
         <NavLink to="/register">Register</NavLink>
       </li> */}
+      {/* <li>
+        <NavLink to="/about-us">About Us</NavLink>
+      </li> */}
+
       {/* <li>
         <NavLink to="/login">Login</NavLink>
       </li> */}
@@ -89,7 +90,7 @@ const Navbar = () => {
               src={logo}
               alt=""
             />
-            <h1 className="ml-1 text-3xl font-extrabold invisible md:visible lg:visible">
+            <h1 className="ml-1 text-2xl font-extrabold invisible md:visible lg:visible">
               Fashion House
             </h1>
           </Link>
