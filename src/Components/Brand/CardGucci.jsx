@@ -25,7 +25,9 @@ const CardGucci = ({ data }) => {
           />
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-success">View Details</button>
+            <Link to={`/detailsProduct/${_id}`}>
+              <button className="btn btn-success">View Details</button>
+            </Link>
             <Link to={`/updateProduct/${_id}`}>
               <button className="btn btn-error">Update</button>
             </Link>

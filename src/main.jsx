@@ -70,10 +70,7 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <Profile></Profile>,
       },
-      {
-        path: "/cart/:id",
-        element: <Details></Details>,
-      },
+
       {
         path: "/updateProduct/:id",
         element: <UpdateProduct></UpdateProduct>,

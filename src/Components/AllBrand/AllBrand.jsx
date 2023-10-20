@@ -6,7 +6,7 @@ const AllBrand = () => {
       <h1 className=" text-4xl font-semibold text-center mt-20" id="welcome">
         Our Popular Brand
       </h1>
-      <div className="grid ml-5 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+      <div className="grid ml-7 mr-5 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
         {/* brand-1 */}
         <Link to="/reebok">
           <div className=" card-body h-96 shadow-2xl flex justify-center mt-5 mb-14 ">

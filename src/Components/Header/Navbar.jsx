@@ -90,7 +90,7 @@ const Navbar = () => {
               src={logo}
               alt=""
             />
-            <h1 className="ml-1 text-2xl font-extrabold invisible md:visible lg:visible">
+            <h1 className="ml-1 text-2xl font-extrabold invisible md:invisible lg:visible">
               Fashion House
             </h1>
           </Link>
