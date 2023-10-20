@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const CardAdidas = ({ data }) => {
+const CardZara = ({ data }) => {
   const { _id, photo, type, name, brand, price, description } = data;
   return (
     <div>
@@ -27,7 +27,7 @@ const CardAdidas = ({ data }) => {
   );
 };
 
-export default CardAdidas;
-CardAdidas.propTypes = {
+export default CardZara;
+CardZara.propTypes = {
   data: PropTypes.string,
 };

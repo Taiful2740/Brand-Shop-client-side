@@ -6,7 +6,6 @@ import AuthProvider from "./AuthProvider/AuthProvider.jsx";
 import Root from "./Root";
 import Home from "./Components/Header/Home";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
-import Products from "./Components/Pages/Products";
 import AddProduct from "./Components/Pages/AddProduct";
 import AboutUs from "./Components/Pages/AboutUs";
 import Register from "./Components/LoginRegister/Register";
@@ -18,6 +17,9 @@ import Puma from "./Components/Brand/Puma";
 import Nike from "./Components/Brand/Nike";
 import Gucci from "./Components/Brand/Gucci";
 import Zara from "./Components/Brand/Zara";
+import UpdateProduct from "./Components/Pages/UpdateProduct";
+import Details from "./Components/Pages/Details";
+import MyCart from "./Components/Header/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -29,14 +31,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "/products",
-        element: <Products></Products>,
-        loader: () => fetch("http://localhost:5000/product"),
-      },
+
       {
         path: "/add-product",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/my-cart",
+        element: <MyCart></MyCart>,
       },
       {
         path: "/about-us",
@@ -53,6 +55,18 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/updateProduct/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: "/detailsProduct/:id",
+        element: <Details></Details>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
       },
       {
         path: "/reebok",
