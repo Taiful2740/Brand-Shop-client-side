@@ -24,7 +24,7 @@ const CardReebok = ({ data }) => {
           />
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <Link to={`/detailsProduct/${_id}`}>
+            <Link to={`/details/${_id}`}>
               <button className="btn btn-success">View Details</button>
             </Link>
             <Link to={`/updateProduct/${_id}`}>

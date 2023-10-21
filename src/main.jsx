@@ -75,13 +75,23 @@ const router = createBrowserRouter([
         path: "/updateProduct/:id",
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://taiful-taiful-islams-projects.vercel.app/product/${params.id}`
+          ),
       },
       {
-        path: "/detailsProduct/:id",
+        path: "/mycart",
+        element: <MyCart></MyCart>,
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/cart"),
+      },
+      {
+        path: "/details/:id",
         element: <Details></Details>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://taiful-taiful-islams-projects.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: "/reebok",
@@ -90,7 +100,8 @@ const router = createBrowserRouter([
             <Reebok></Reebok>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
       {
         path: "/adidas",
@@ -99,8 +110,10 @@ const router = createBrowserRouter([
             <Adidas></Adidas>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
+
       {
         path: "/puma",
         element: (
@@ -108,7 +121,8 @@ const router = createBrowserRouter([
             <Puma></Puma>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
       {
         path: "/nike",
@@ -117,7 +131,8 @@ const router = createBrowserRouter([
             <Nike></Nike>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
       {
         path: "/gucci",
@@ -126,7 +141,8 @@ const router = createBrowserRouter([
             <Gucci></Gucci>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
       {
         path: "/zara",
@@ -135,7 +151,8 @@ const router = createBrowserRouter([
             <Zara></Zara>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch("https://taiful-taiful-islams-projects.vercel.app/product"),
       },
     ],
   },

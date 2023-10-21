@@ -1,48 +1,51 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import swal from "sweetalert";
 
 const Details = () => {
   const product = useLoaderData();
+  const { photo, type, name, brand, price, description, rating } = product;
+
+  console.log(product);
+
   const { user } = useContext(AuthContext);
   const email = user.email;
-  const { _id, name, brand, type, price, rating, description, photo } = product;
-
   const handleAddToCart = () => {
-    const cartDetails = {
-      _id,
+    const newProduct = {
       name,
       brand,
-      type,
       price,
-      rating,
       description,
+      rating,
       photo,
+      type,
       email,
     };
+    console.log(newProduct);
 
-    // send data to server
-    fetch("http://localhost:5000/cart", {
+    // send data to the server
+    fetch("https://taiful-taiful-islams-projects.vercel.app/cart", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
       },
-      body: JSON.stringify(cartDetails),
+      body: JSON.stringify(newProduct),
     })
       .then(res => res.json())
       .then(data => {
         console.log(data);
         if (data.insertedId) {
-          swal.fire({
+          Swal.fire({
+            title: "Success!",
+            text: "product Added Successfully",
             icon: "success",
-            title: "Success",
-            text: "Product Updated Successfully!",
             confirmButtonText: "Cool",
           });
         }
       });
   };
+
   return (
     <div>
       <div className="mx-auto max-w-screen-xl px-9 py-12">

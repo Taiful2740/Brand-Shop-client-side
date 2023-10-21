@@ -16,7 +16,7 @@ const slideImages = [
     // caption: "Slide 1",
   },
   {
-    url: "https://thumbs.dreamstime.com/b/tyumen-russia-january-running-orange-sneakers-adidas-multinational-company-collage-banner-wide-panorama-shoes-color-photo-269506671.jpg",
+    url: "https://i.pinimg.com/originals/4e/31/42/4e3142435b7a0a2f5f1229db876c7ed4.jpg",
     // caption: "Slide 2",
   },
   {

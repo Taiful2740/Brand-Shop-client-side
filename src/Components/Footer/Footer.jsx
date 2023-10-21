@@ -8,14 +8,14 @@ const Footer = () => {
           <Link className="link link-hover" to="/">
             Home
           </Link>
-          <Link className="link link-hover" to="/products">
-            Products
+          <Link className="link link-hover" to="/my-cart">
+            My Cart
           </Link>
           <Link className="link link-hover" to="/add-product">
             Add Product
           </Link>
-          <Link className="link link-hover" to="/about-us">
-            About us
+          <Link className="link link-hover" to="/contact-us">
+            Contact us
           </Link>
           <Link className="link link-hover" to="/register">
             Register
