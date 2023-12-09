@@ -2,6 +2,9 @@
 
 <a href="https://github.com/Taiful2740/Brand-Shop-server-side">Server Link</a>
 
+Technology Used: Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
+
+Features:
 
 1.Product Galleries:
 
